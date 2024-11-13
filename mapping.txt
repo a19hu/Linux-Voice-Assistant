@@ -1,0 +1,23 @@
+open [app name]
+close [app name]
+list files in [directory]
+create a new file named [file name]
+delete the file [file name]
+move [file] to [directory]
+copy [file] to [directory]
+increase volume by [x]%
+decrease volume by [x]%
+mute/unmute volume
+check battery status
+increase brightness by [x]%
+decrease brightness by [x]%
+what’s the date/time?
+take a screenshot
+search the web for [query]
+play media
+pause media
+check cpu status
+check memory usage
+check network status
+execute [custom command]
+authenticate
