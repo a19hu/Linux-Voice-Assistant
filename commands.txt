@@ -1,0 +1,23 @@
+Open [App Name],<source>
+Close [App Name],pkill <source>
+List files in [Directory],ls
+Create a new file named [File Name],touch <source>
+Delete the file [File Name],rm -rf <source>
+Move [File] to [Directory],mv <source> <destination>
+Copy [File] to [Directory],cp <source> <destination>
+Increase volume by [X]%,pactl set-sink-volume @DEFAULT_SINK@ +10%
+Decrease volume by [X]%,pactl set-sink-volume @DEFAULT_SINK@ -10%
+Mute/Unmute volume,amixer set Master toggle
+Check battery status,acpi
+Increase brightness by [X]%,sudo brightnessctl set +10%
+Decrease brightness by [X]%,sudo brightnessctl set -10%
+What’s the date/time?,date
+Take a screenshot,gnome-screenshot
+Search the web for [query],xdg-open "https://www.google.com/search?q=<source>"
+Play media,playerctl play
+Pause media,playerctl pause
+Check CPU status,top
+Check memory usage,free -h
+Check network status,ifconfig
+Execute [Custom Command],subprocess.run(<command>) in Python
+Authenticate,sudo -v
