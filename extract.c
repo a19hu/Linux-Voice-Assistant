@@ -31,6 +31,10 @@ void processCommand(const char *line) {
     } else if (strstr(line, "close")) {
         sscanf(line, "close %[^\n]", arg1);
         printf("%s\n", arg1);
+    }
+    else if(strstr(line,"search the web for")){
+        sscanf(line,"search the web for %[^\n]",arg1);
+        printf("%s\n",arg1);
     } else {
         printf("Invalid command!\n");
     }

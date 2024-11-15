@@ -262,7 +262,7 @@ int main() {
         {"Decrease brightness by [X]%", "sudo brightnessctl set -10%"},
         {"What’s the date/time?", "date"},
         {"Take a screenshot", "gnome-screenshot"},
-        {"Search the web for [query]", "xdg-open \"https://www.google.com/search?q=<query>\""},
+        {"Search the web for [query]", "xdg-open \"https://www.google.com/search?q=<source>\""},
         {"Play media", "playerctl play"},
         {"Pause media", "playerctl pause"},
         {"Check CPU status", "top"},
