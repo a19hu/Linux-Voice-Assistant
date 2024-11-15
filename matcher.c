@@ -252,9 +252,12 @@ char input_text[MAX_TEXT_LENGTH];
     }
 
     // Output the result
-    printf("Most similar line:\n");
-    printf("Line %d: \"%s\"\n", max_index +1, documents[max_index]);
-    printf("Similarity: %.2lf%%\n", max_similarity);
+    // printf("Most similar line:\n");
+    printf("%d", max_index +1);
+    // printf("Similarity: %.2lf%%\n", max_similarity);
 
     return 0;
 }
+
+
+//documents[max_index]
