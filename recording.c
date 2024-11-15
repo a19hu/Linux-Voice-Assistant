@@ -8,7 +8,7 @@
 #define SAMPLE_RATE 44100
 #define CHANNELS 1
 #define BUFFER_SIZE 128
-#define DURATION 5  // Duration in seconds
+#define DURATION 3  // Duration in seconds
 
 void write_wav_header(FILE *file, int sample_rate, int channels, int num_samples) {
     int byte_rate = sample_rate * channels * 2;

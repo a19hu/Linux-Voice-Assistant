@@ -6,6 +6,8 @@ base64 recording.wav > audio_base64.txt
 
 ./mat > line.txt
 
+./extract > extractedWords.log
+
 ./dic > cmd.log 
 
-cat cmd.log | bash
+cat cmd.log | bash 
