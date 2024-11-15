@@ -139,7 +139,7 @@ int main() {
 
     // printf("huga");
     FILE *file;
-    char filename[] = "mapping.txt";
+    char filename[] = "commands.txt";
     char line[MAX_TEXT_LENGTH];
     char documents[MAX_DOCUMENTS][MAX_TEXT_LENGTH];
     int num_documents = 0;
@@ -168,12 +168,39 @@ char input_text[MAX_TEXT_LENGTH];
     }
 
     // Read lines from the file
+        // while(fgets(line, sizeof(line), file) != NULL && num_documents < MAX_DOCUMENTS){
+        //     // Remove newline character
+        //     line[strcspn(line, "\n")] = 0;
+            
+        //     strcpy(documents[num_documents++], line);
+        // }
+    // while(fgets(line, sizeof(line), file) != NULL && num_documents < MAX_DOCUMENTS){
+    // // Remove newline character
+    // line[strcspn(line, "\n")] = 0;
+
+    // // Check for a comma in the line
+    // if (strchr(line, ',') != NULL) {
+    //     break; // Stop reading when a comma is found
+    // }
+
+    // // Store the line in the documents array
+    // strcpy(documents[num_documents++], line);
+    // }
     while(fgets(line, sizeof(line), file) != NULL && num_documents < MAX_DOCUMENTS){
-        // Remove newline character
-        line[strcspn(line, "\n")] = 0;
-        
-        strcpy(documents[num_documents++], line);
+    // Remove newline character
+    line[strcspn(line, "\n")] = 0;
+
+    // Find the position of the comma
+    char *comma_pos = strchr(line, ',');
+
+    // If a comma is found, terminate the string at the comma
+    if (comma_pos != NULL) {
+        *comma_pos = 0;  // Null-terminate the string at the comma
     }
+
+    // Store the line (left of the comma) in the documents array
+    strcpy(documents[num_documents++], line);
+}
 
     fclose(file);
 
