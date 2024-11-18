@@ -1,0 +1,27 @@
+open [app name],<source>
+close [app name],pkill <source>
+list files in [directory],ls
+create a new file named [file name],touch <source>
+delete the file [file name],rm -rf <source>
+move [file] to [directory],mv <source> <destination>
+copy [file] to [directory],cp <source> <destination>
+current folder,pwd
+increase volume by [x]%,pactl set-sink-volume @default_sink@ +10%
+decrease volume by [x]%,pactl set-sink-volume @default_sink@ -10%
+mute,pactl set-sink-mute @DEFAULT_SINK@ 1
+unmute,pactl set-sink-mute @DEFAULT_SINK@ 0
+check battery status,acpi
+increase brightness by [x]%,sudo brightnessctl set +10%
+decrease brightness by [x]%,sudo brightnessctl set 10%-
+what’s the date/time?,date
+take a screenshot,gnome-screenshot
+search the web for [query],xdg-open "https://www.google.com/search?q=<source>"
+play media,playerctl play
+pause media,playerctl pause
+check cpu status,top
+check memory usage,free -h
+check network status,ifconfig
+execute [custom command],subprocess.run(<command>) in python
+authenticate,sudo -v
+shut down,shutdown now
+restart,reboot
